@@ -8,7 +8,9 @@ export default class Article extends Component {
 
     state = {
         isArticleOpen: false,
+        //лучше внести этот стейт в CommentList, иначе компонент выходит очень прегруженным
         isCommentsOpen : false,
+        //а это совсем не нужно в state, ты можешь получить текст из прошлой переменной
         buttonCommentsCaption: this.showComments
     }
 
@@ -42,7 +44,7 @@ export default class Article extends Component {
         this.setState ({isCommentsOpen: !this.state.isCommentsOpen})
         this.setState({buttonCommentsCaption: this.getButtonCommentsCaption()})
     }
-
+    //зачем тебе передавать в аргументе?
     getBody(article) {
         if (!this.state.isArticleOpen) return null
         /*const commentToggleButton = <CommentToggleButton {this.toggleComments} caption="show" >ShowComments</CommentToggleButton>*/
@@ -71,6 +73,7 @@ export default class Article extends Component {
     }
 
     getButtonCommentsCaption() {
+        //не надо (=== true), это же и так boolean
         if (this.state.isCommentsOpen === true)  {
             return this.showComments
         } else {
