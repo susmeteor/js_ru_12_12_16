@@ -1,4 +1,4 @@
-import React  from 'react'
+import React, { PropTypes }  from 'react'
 
 function Comment(props) {
     const { comment: { text, user } } = props
@@ -10,3 +10,7 @@ function Comment(props) {
 }
 
 export default Comment
+
+Comment.propTypes = {
+    comment: PropTypes.object.isRequired,
+}
