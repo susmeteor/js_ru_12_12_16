@@ -11,6 +11,7 @@ class ArticleList extends React.Component {
             <li key={article.id}>
                 <Article article={article}
                          isOpen={this.props.openArticleId == article.id}
+                                             {/*Вот эту логику следовало тоже в декоратор внести*/}
                          onClick={this.props.toggleOpenArticle(this.props.openArticleId != article.id ? article.id : null)}
                 />
             </li>)
