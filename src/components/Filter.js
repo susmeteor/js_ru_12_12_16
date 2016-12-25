@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import Select from 'react-select'
 import 'react-select/dist/react-select.css'
+import DayRange from './DayRange'
 
 class Filter extends Component {
     static propTypes = {
@@ -19,6 +20,7 @@ class Filter extends Component {
         return (
             <div>
                 <Select options={options} value={this.state.selected} onChange={this.handleChange} multi={true}/>
+                <DayRange/>
             </div>
         )
     }
