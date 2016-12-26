@@ -6,6 +6,7 @@ class AddCommentForm extends Component {
     };
 
     state = {
+        //ок, но я просил текст и юзера
         textComment: ''
     }
 
