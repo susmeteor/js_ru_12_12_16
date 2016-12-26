@@ -42,6 +42,7 @@ class DayRange extends Component {
     }
 
     //так не работает :(
+    //А почему должно работать? убери ev =>, тебе не нужно здесь возвращать функцию
     // handleDayClick = (ev) => (day) => {
     //     const range = DateUtils.addDayToRange(day, this.state);
     //     this.setState({range});
